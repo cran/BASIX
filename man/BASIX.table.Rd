@@ -29,6 +29,12 @@ BASIX.table(matrix)
   
 }  
 
+\details{
+
+This function can be applied to numeric as well as character matrices.
+
+}
+
 
 \examples{
 

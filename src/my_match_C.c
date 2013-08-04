@@ -20,27 +20,35 @@ size2       = length(Rvector);
 
 SEXP matchIDS    = R_NilValue;
 PROTECT(matchIDS = allocVector(INTSXP, size1));
+int *mmm         = INTEGER(matchIDS);
 
 // Init match matchIDS wit NA values
 for(long int x=0; x<size1;x++){
-INTEGER(matchIDS)[x] = R_NaReal;
+mmm[x] = R_NaReal;
 }
-//
 
+long int m       = 0;
 
-long int start  = 0;
+  for (long int j=0; j < size2; j++){
+	
+	if(vec1[m]==vec2[j]){         
+	   mmm[m] = j+1;
+	   m = m + 1;
+	   if(m == size1){
+	   break;
+	   }
+	j = j - 1;	   			
+       	}
 
-for(long int i=0; i < size1; i++) {
-
-  for (long int j=start; j < size2; j++){
-
-	if(vec1[i]==vec2[j]){         
-	   INTEGER(matchIDS)[i] = j+1;
-           start = j-1;
-           break;
+	if(vec1[m]<vec2[j]){
+	  m = m + 1;
+	  if(m == size1){
+	   break;
+	  }
+	j = j - 1;  	        
 	}
+	
   }
-}
 
 UNPROTECT(1);
 return matchIDS;

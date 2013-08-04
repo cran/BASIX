@@ -29,9 +29,11 @@ BASIX.equal(a,b)
 
 Native R functions compare every entry of the entired vectors, \cr  
 
-The R solution would be:
+The R solution would be: \cr
 
-\code{all(a==b)}
+\code{all(a==b)} \cr
+
+The function can be applied to numeric as well as character vectors
 
 }
 

@@ -14,33 +14,32 @@ Extract unique rows of a matrix
 \description{
 
 \code{BASIX.unique} returns a matrix with duplicate rows removed.
+The unique rows ids will be saved as rownames.
 
 }
 
 \usage{
 
-BASIX.unique(matrix,large.columns=TRUE)
+BASIX.unique(matrix)
 
 }
 
 \arguments{
 
   \item{matrix}{a matrix}
-  \item{large.columns}{should be switched to \code{TRUE} if the matrix contains only a few columns (~10)}
   
 }  
 
 \details{
 
 \code{BASIX.unique} 
-is a version of \code{unique} specialized on matrices with a
-large number of columns.
+is a version of \code{unique} specialized on matrices. \cr
 
-The native R solution would be:
+The native R solution would be: \cr
+\code{unique(matrix)} \cr
 
-\code{unique(matrix)}
+This function can be applied to numeric as well as character vectors.
 
-and is used if \code{large.columns=FALSE}
 }
 
 
