@@ -1,15 +1,15 @@
 Package: BASIX
 Type: Package
-Title: BASIX: An efficient C/C++ toolset for R.
-Version: 1.1
-Date: 2013-08-4
+Title: An Efficient C/C++ Toolset for R
+Version: 1.2
+Date: 2022-06-13
 Author: Bastian Pfeifer
-Maintainer: Bastian Pfeifer <Bastian.Pfeifer@uni-duesseldorf.de>
+Maintainer: Bastian Pfeifer <bastianxpfeifer@gmail.com>
 Depends: R (>= 2.14.2), methods
-Description: BASIX provides some efficient C/C++ implementations to speed up calculations in R. 
+Description: Accelerated computation for some basic R functions. 
 License: GPL-2
 LazyLoad: yes
-Packaged: 2013-10-24 12:06:28 UTC; bastian
+Packaged: 2022-06-13 12:50:10 UTC; bastian
 NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2013-10-24 15:02:32
+Date/Publication: 2022-06-13 16:10:02 UTC
